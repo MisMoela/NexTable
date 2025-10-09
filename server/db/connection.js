@@ -1,9 +1,6 @@
 const { Pool } = require('pg');
 require('dotenv').config({ path: '../.env' });  // Loads from root if in /server
 
-console.log('DB_PASSWORD type:', typeof process.env.DB_PASSWORD);  // Debug
-console.log('DB_PASSWORD value:', process.env.DB_PASSWORD ? 'Set' : 'Missing');
-
 const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'postgres',
